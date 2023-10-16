@@ -4,6 +4,10 @@ import Categories from './Categories';
 import items from './data';
 
 function App() {
+
+  const [menuItems, setMenuItems] = useState(items);
+  const [categories, setCategories] = useState([]);
+
   return(
     <main>
       <section className="menu section">
@@ -14,9 +18,8 @@ function App() {
       </section>
 
       <Categories />
-      <Menu />
-            
-    </main>    
+      <Menu items={menuItems}/>
+    </main>
   )
 }
 
